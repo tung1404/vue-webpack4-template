@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Hello {{ name }} from my Vue.js page, built with Webpack 4!</h3>
+    <h3>Hi {{ name }}, built with Webpack 4!</h3>
   </div>
 </template>
 
@@ -12,5 +12,5 @@ export default {
       required: true
     }
   }
-}
+};
 </script>
