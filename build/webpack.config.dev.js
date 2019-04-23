@@ -1,11 +1,11 @@
-'use strict'
+'use strict';
 
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const baseConfig = require('./webpack.config.base')
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.config.base');
 
-const HOST = 'localhost'
-const PORT = 8080
+const HOST = 'localhost';
+const PORT = 8080;
 
 module.exports = merge(baseConfig, {
   mode: 'development',
@@ -22,12 +22,13 @@ module.exports = merge(baseConfig, {
     publicPath: '/',
     quiet: true,
     watchOptions: {
-      poll: true
-    }
+      poll: true,
+    },
   },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
-  ]
-})
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NamedModulesPlugin(),
+  ],
+});
